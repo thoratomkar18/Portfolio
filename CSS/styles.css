@@ -566,7 +566,8 @@ section:nth-child(even) {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url("https://github.com/thoratomkar18/Portfolio/blob/main/assets/images/home-bg3.jpg") center/cover no-repeat;
+    background: url("../assets/images/home-bg3.jpg") center/cover no-repeat;
+    background-color: var(--bg-secondary);
     position: relative;
     overflow: hidden;
 }
