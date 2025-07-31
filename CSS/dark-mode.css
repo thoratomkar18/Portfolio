@@ -1,0 +1,335 @@
+/* ==========================================================================
+   Dark Mode Styles
+   ========================================================================== */
+
+[data-theme="dark"] {
+    /* Dark theme colors */
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --bg-tertiary: #374151;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: #374151;
+    --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-large: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}
+
+[data-theme="dark"] body {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .main-header {
+    background-color: rgba(31, 41, 55, 0.95);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .hero-section {
+        background: url("/assets/images/dark-bg.jpg") center/cover no-repeat;
+
+}
+
+[data-theme="dark"] .contact-section {
+    background: linear-gradient(135deg, #0f172a 0%, #000000 100%);
+}
+
+[data-theme="dark"] .main-footer {
+    background-color: #0f172a;
+}
+
+/* ==========================================================================
+   Dark Mode Contact Section Text Visibility
+   ========================================================================== */
+
+[data-theme="dark"] .contact-section .section-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contact-section .section-description {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .contact-info h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contact-info p {
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Dark Mode Project Buttons and Animations
+   ========================================================================== */
+
+[data-theme="dark"] .project-link {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .project-link:hover,
+[data-theme="dark"] .project-link:focus {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .project-link.secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+}
+
+[data-theme="dark"] .project-link.secondary:hover,
+[data-theme="dark"] .project-link.secondary:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .project-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(31, 41, 55, 0.8) 0%,
+        rgba(31, 41, 55, 0.9) 100%
+    );
+    opacity: 0;
+    transition: opacity var(--transition-medium);
+}
+
+[data-theme="dark"] .project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+[data-theme="dark"] .project-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-medium);
+}
+
+[data-theme="dark"] .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .project-image {
+    transition: transform var(--transition-medium);
+}
+
+[data-theme="dark"] .project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Dark Mode Project Content
+   ========================================================================== */
+
+[data-theme="dark"] .project-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .project-description {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tech-tag {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .tech-tag:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Dark Mode Filter Buttons
+   ========================================================================== */
+
+[data-theme="dark"] .filter-btn {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    background-color: transparent;
+    transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .filter-btn:focus {
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    background-color: rgba(250, 204, 21, 0.1);
+}
+
+[data-theme="dark"] .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Dark Mode Theme Toggle
+   ========================================================================== */
+
+[data-theme="dark"] .theme-toggle-icon {
+    background-color: transparent;
+    border: 2px solid var(--text-primary);
+    position: relative;
+}
+
+[data-theme="dark"] .theme-toggle-icon::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    transform: translateX(6px);
+    transition: transform var(--transition-medium);
+}
+
+/* ==========================================================================
+   Dark Mode Form Styles
+   ========================================================================== */
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-textarea:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   Dark Mode Skill Categories
+   ========================================================================== */
+
+[data-theme="dark"] .skill-category {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .skill-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .skill-list li {
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Dark Mode Buttons
+   ========================================================================== */
+
+[data-theme="dark"] .btn-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* ==========================================================================
+   Dark Mode Animations and Transitions
+   ========================================================================== */
+
+[data-theme="dark"] * {
+    transition: background-color var(--transition-medium), 
+                color var(--transition-medium), 
+                border-color var(--transition-medium),
+                transform var(--transition-medium),
+                box-shadow var(--transition-medium);
+}
+
+[data-theme="dark"] .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+[data-theme="dark"] .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-theme="dark"] .animate-slide-up {
+    animation: slideInUp var(--transition-slow) ease-out;
+}
+
+[data-theme="dark"] .animate-slide-left {
+    animation: slideInLeft var(--transition-slow) ease-out;
+}
+
+[data-theme="dark"] .animate-slide-right {
+    animation: slideInRight var(--transition-slow) ease-out;
+}
+
+/* ==========================================================================
+   Dark Mode Contact Methods
+   ========================================================================== */
+
+[data-theme="dark"] .contact-method {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .contact-method:hover,
+[data-theme="dark"] .contact-method:focus {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ==========================================================================
+   Dark Mode Character Counter
+   ========================================================================== */
+
+[data-theme="dark"] .character-counter {
+    color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   Dark Mode Form Error Messages
+   ========================================================================== */
+
+[data-theme="dark"] .form-error {
+    color: #f87171;
+}
+
+[data-theme="dark"] .form-error.show {
+    color: #ef4444;
+}
+
+/* ==========================================================================
+   Dark Mode Required Field Indicator
+   ========================================================================== */
+
+[data-theme="dark"] .required {
+    color: #ef4444;
+}
