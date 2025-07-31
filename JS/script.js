@@ -62,16 +62,15 @@ class PortfolioApp {
         // Handle focus events for better keyboard navigation
         document.addEventListener('focusin', (e) => this.handleFocus(e));
         document.addEventListener('focusout', (e) => this.handleBlur(e));
+
+        // Theme toggle for mobile
+        document.getElementById('theme-toggle-mobile').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
     }
-
-    
-document.getElementById('theme-toggle-mobile').addEventListener('click', function() {
-
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
 
     // Utility functions for performance
     debounce(func, wait) {
