@@ -215,6 +215,7 @@ strong, b {
 .theme-toggle.nav-theme-toggle {
   position: static;           /* No fixed/absolute positioning in nav */
   margin-left: var(--space-4);
+  margin-right: 0; /* Space between toggle and menu button */
   width: 40px;
   height: 40px;
   background: none;
@@ -229,9 +230,10 @@ strong, b {
 .theme-toggle.nav-theme-toggle .theme-toggle-icon {
   width: 20px;
   height: 20px;
-  background: var(--text-primary);
+  background: currentColor;
   border-radius: 50%;
-  /* (You can use inline SVG icons or CSS shapes for sun/moon here if desired) */
+  display: block;
+  transition: all var(--transition-medium);
 }
 
 
@@ -302,8 +304,12 @@ strong, b {
 
 .logo {
     margin-right: auto; /* Push everything else to the right */
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
 }
 
+/* Update theme toggle positioning */
 .nav-theme-toggle {
     margin-left: auto; /* Push to right after logo */
     margin-right: var(--space-4); /* Space between toggle and menu button */
@@ -317,25 +323,19 @@ strong, b {
     cursor: pointer;
 }
 
+/* Remove mobile theme toggle styles */
+.mobile-nav-link.theme-toggle {
+    display: none; /* Hide the mobile theme toggle */
+}
+
 .mobile-menu-toggle {
     /* Existing styles */
     margin-left: 0; /* Remove any auto margin */
 }
 
-/* Theme toggle icon styles */
-.nav-theme-toggle .theme-toggle-icon {
-    width: 20px;
-    height: 20px;
-    background: currentColor;
-    border-radius: 50%;
-    display: block;
-    transition: all var(--transition-medium);
-}
-
 /* Optional: Add hover effect */
 .nav-theme-toggle:hover {
     transform: scale(1.1);
-}
 }
 
 /* Logo */
@@ -487,7 +487,8 @@ strong, b {
 
 /* Mobile Theme Toggle */
 .mobile-nav-link.theme-toggle {
-    display: none;
+    display: none; /* Hide the mobile theme toggle */
+}
 
 /* ==========================================================================
    Social Sidebar
@@ -610,6 +611,7 @@ section:nth-child(even) {
     justify-content: center;
     text-align: center;
     background: url("../assets/images/home-bg3.jpg") center/cover no-repeat;
+    /* Add a fallback color */
     background-color: var(--bg-secondary);
     position: relative;
     overflow: hidden;
