@@ -26,7 +26,7 @@
 }
 
 [data-theme="dark"] .hero-section {
-        background: url("assets/images/dark-bg.jpg") center/cover no-repeat;
+        background: url("../assets/images/dark-bg.jpg") center/cover no-repeat;
 
 }
 
