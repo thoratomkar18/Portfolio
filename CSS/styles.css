@@ -297,6 +297,45 @@ strong, b {
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    position: relative;
+}
+
+.logo {
+    margin-right: auto; /* Push everything else to the right */
+}
+
+.nav-theme-toggle {
+    margin-left: auto; /* Push to right after logo */
+    margin-right: var(--space-4); /* Space between toggle and menu button */
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.mobile-menu-toggle {
+    /* Existing styles */
+    margin-left: 0; /* Remove any auto margin */
+}
+
+/* Theme toggle icon styles */
+.nav-theme-toggle .theme-toggle-icon {
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    border-radius: 50%;
+    display: block;
+    transition: all var(--transition-medium);
+}
+
+/* Optional: Add hover effect */
+.nav-theme-toggle:hover {
+    transform: scale(1.1);
+}
 }
 
 /* Logo */
@@ -448,25 +487,7 @@ strong, b {
 
 /* Mobile Theme Toggle */
 .mobile-nav-link.theme-toggle {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-size: inherit;
-    color: var(--text-primary);
-    cursor: pointer;
-}
-
-.mobile-nav-link.theme-toggle .theme-toggle-icon {
-    width: 16px;
-    height: 16px;
-    background-color: currentColor;
-    border-radius: 50%;
-    margin: 0;
-}
+    display: none;
 
 /* ==========================================================================
    Social Sidebar
