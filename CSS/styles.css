@@ -446,6 +446,28 @@ strong, b {
     padding-left: var(--space-8);
 }
 
+/* Mobile Theme Toggle */
+.mobile-nav-link.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: inherit;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.mobile-nav-link.theme-toggle .theme-toggle-icon {
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    border-radius: 50%;
+    margin: 0;
+}
+
 /* ==========================================================================
    Social Sidebar
    ========================================================================== */
