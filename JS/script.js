@@ -64,6 +64,15 @@ class PortfolioApp {
         document.addEventListener('focusout', (e) => this.handleBlur(e));
     }
 
+    
+document.getElementById('theme-toggle-mobile').addEventListener('click', function() {
+
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
     // Utility functions for performance
     debounce(func, wait) {
         let timeout;
